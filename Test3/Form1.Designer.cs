@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
             this.listView3 = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,9 +46,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // listView1
@@ -56,12 +58,24 @@
             this.columnHeader3});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(38, 26);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(275, 162);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Titel";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Uppdateringsfrekvens";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Kategori";
             // 
             // listView2
             // 
@@ -142,9 +156,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(73, 237);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.Size = new System.Drawing.Size(40, 17);
             this.label1.TabIndex = 9;
-            this.label1.Text = "label1";
+            this.label1.Text = "URL:";
             // 
             // label2
             // 
@@ -188,23 +202,29 @@
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 14;
             // 
-            // columnHeader1
+            // comboBox1
             // 
-            this.columnHeader1.Text = "Titel";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(160, 209);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 15;
             // 
-            // columnHeader2
+            // comboBox2
             // 
-            this.columnHeader2.Text = "Uppdateringsfrekvens";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Kategori";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(287, 209);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
@@ -220,7 +240,7 @@
             this.Controls.Add(this.listView3);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -248,6 +268,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 
