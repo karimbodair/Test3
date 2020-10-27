@@ -45,9 +45,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.frekvensBox = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.kategoriBox = new System.Windows.Forms.ComboBox();
             this.beskrivningList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
@@ -210,14 +210,14 @@
             this.textBox2.Size = new System.Drawing.Size(125, 20);
             this.textBox2.TabIndex = 14;
             // 
-            // comboBox1
+            // frekvensBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(28, 212);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(118, 21);
-            this.comboBox1.TabIndex = 15;
+            this.frekvensBox.FormattingEnabled = true;
+            this.frekvensBox.Location = new System.Drawing.Point(28, 212);
+            this.frekvensBox.Margin = new System.Windows.Forms.Padding(2);
+            this.frekvensBox.Name = "frekvensBox";
+            this.frekvensBox.Size = new System.Drawing.Size(118, 21);
+            this.frekvensBox.TabIndex = 15;
             // 
             // textBox3
             // 
@@ -228,15 +228,15 @@
             this.textBox3.TabIndex = 17;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // comboBox2
+            // kategoriBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(150, 212);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(118, 21);
-            this.comboBox2.TabIndex = 18;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.kategoriBox.FormattingEnabled = true;
+            this.kategoriBox.Location = new System.Drawing.Point(150, 212);
+            this.kategoriBox.Margin = new System.Windows.Forms.Padding(2);
+            this.kategoriBox.Name = "kategoriBox";
+            this.kategoriBox.Size = new System.Drawing.Size(118, 21);
+            this.kategoriBox.TabIndex = 18;
+            this.kategoriBox.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // beskrivningList
             // 
@@ -252,9 +252,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.beskrivningList);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.kategoriBox);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.frekvensBox);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -295,9 +295,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox frekvensBox;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox kategoriBox;
         private System.Windows.Forms.ListBox beskrivningList;
     }
 }

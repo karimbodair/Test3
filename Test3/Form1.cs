@@ -18,9 +18,12 @@ namespace Test3
     public partial class Form1 : Form
     {
         Url_reader urlReader = new Url_reader();
+
+        List<String> listCategory;
         public Form1()
         {
             InitializeComponent();
+            listCategory = new List<String> ();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -30,14 +33,14 @@ namespace Test3
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-           var podcast = urlReader.LasaUrl(textBox3.Text);
+
+            var podcast = urlReader.LasaUrl(textBox3.Text);
 
             string[] listPodcast = { podcast.namn, podcast.antalAvsnitt.ToString(), "", "" };
             ListViewItem lista = new ListViewItem(listPodcast);
             podcastList.Items.Add(lista);
 
-            
+
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -50,8 +53,9 @@ namespace Test3
             string nyKategori = textBox2.Text.Trim();
             if (nyKategori.Length != 0)
             {
-                comboBox2.Items.Add(nyKategori);
+                kategoriBox.Items.Add(nyKategori);
                 kategoriList.Items.Add(nyKategori);
+                listCategory.Add(nyKategori);
             }
             textBox2.Clear();
         }
@@ -63,7 +67,8 @@ namespace Test3
 
         private void button5_Click(object sender, EventArgs e)
         {
-            kategoriList.SelectedItems[0]
-            }
+            kategoriList.SelectedItems[0].SubItems[0].Text = textBox2.Text;
+            Update();
         }
     }
+}
