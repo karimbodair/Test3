@@ -14,34 +14,32 @@ namespace BL
     {
 
         public Url_reader()
-        {
+         {
 
-        }
+         }
 
-        public Podcast GetPodcast(string url)
+        public Podcast LasaUrl (string url)
         {
-            XmlReader FD_readxml = XmlReader.Create(url);
-            SyndicationFeed stream = SyndicationFeed.Load(FD_readxml);
+            
+                XmlReader FD_readxml = XmlReader.Create(url);
+                SyndicationFeed FD_feed = SyndicationFeed.Load(FD_readxml);
+
             var podcast = new Podcast();
-            podcast.listOfEpisodes = GetEpisodes(stream);
-            podcast.namn = stream.Title.Text;
-            podcast.antalAvsnitt = stream.Items.Count();
-            return podcast;
-        }
 
-        private List<Episode> GetEpisodes(SyndicationFeed stream)
-        {
-            var EpisodeList = new List<Episode>();
+            podcast.namn = FD_feed.Title.Text;
 
-            foreach (SyndicationItem item in stream.Items)
+            podcast.antalAvsnitt = FD_feed.Items.Count();
+
+
+            foreach (SyndicationItem item in FD_feed.Items)
             {
-                var episode = new Episode();
-                episode.Title = item.Title.Text;
-                episode.Description = item.Summary.Text;
-                //episode.Url = url;
-                EpisodeList.Add(episode);
+                Episode tempepisodeobj = new Episode();
+                tempepisodeobj.Title = item.Title.Text;
+                tempepisodeobj.Description = item.Summary.Text;
+                podcast.listOfEpisodes.Add(tempepisodeobj);
             }
-            return EpisodeList;
+            return podcast;
+
         }
     }
 }

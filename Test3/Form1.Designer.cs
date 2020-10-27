@@ -50,7 +50,7 @@ namespace Test3
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.beskrivningList = new System.Windows.Forms.ListView();
+            this.beskrivningList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // podcastList
@@ -66,7 +66,6 @@ namespace Test3
             this.podcastList.TabIndex = 0;
             this.podcastList.UseCompatibleStateImageBehavior = false;
             this.podcastList.View = System.Windows.Forms.View.Details;
-            this.podcastList.SelectedIndexChanged += new System.EventHandler(this.podcastList_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -112,7 +111,7 @@ namespace Test3
             this.button1.TabIndex = 3;
             this.button1.Text = "Lägg till";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button_Click_Add);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -245,7 +244,7 @@ namespace Test3
             // 
             // beskrivningList
             // 
-            this.beskrivningList.HideSelection = false;
+            this.beskrivningList.FormattingEnabled = true;
             this.beskrivningList.Location = new System.Drawing.Point(453, 212);
             this.beskrivningList.Name = "beskrivningList";
             this.beskrivningList.Size = new System.Drawing.Size(306, 199);
@@ -308,7 +307,7 @@ namespace Test3
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ListView beskrivningList;
+        private System.Windows.Forms.ListBox beskrivningList;
     }
 }
 
