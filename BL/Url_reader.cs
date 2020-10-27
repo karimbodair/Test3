@@ -30,9 +30,16 @@ namespace BL
 
             podcast.antalAvsnitt = FD_feed.Items.Count();
 
+
+            foreach (SyndicationItem item in FD_feed.Items)
+            {
+                Episode tempepisodeobj = new Episode();
+                tempepisodeobj.Title = item.Title.Text;
+                tempepisodeobj.Description = item.Summary.Text;
+                podcast.listOfEpisodes.Add(tempepisodeobj);
+            }
             return podcast;
 
-                
         }
     }
 }

@@ -13,5 +13,8 @@ namespace DAL
         public string kategori { get; set; }
 
         public int frekvens { get; set; }
+
+        public List<Episode> listOfEpisodes { get; set; }
+        //lista episode (title, desc)
     }
 }

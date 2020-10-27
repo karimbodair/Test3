@@ -63,7 +63,12 @@ namespace Test3
 
         private void button5_Click(object sender, EventArgs e)
         {
-            kategoriList.SelectedItems[0]
+            ListViewItem listViewItem = kategoriList.SelectedItems[0];
             }
+
+        private void avsnittList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
+    }
     }
