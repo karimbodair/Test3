@@ -44,5 +44,21 @@ namespace Test3
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string nyKategori = textBox2.Text.Trim();
+            if (nyKategori.Length != 0)
+            {
+                comboBox2.Items.Add(nyKategori);
+                listView3.Items.Add(nyKategori);
+            }
+            textBox2.Clear();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

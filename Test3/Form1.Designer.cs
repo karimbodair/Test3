@@ -96,6 +96,7 @@
             this.listView3.Size = new System.Drawing.Size(287, 132);
             this.listView3.TabIndex = 2;
             this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.List;
             // 
             // button1
             // 
@@ -137,6 +138,7 @@
             this.button4.TabIndex = 6;
             this.button4.Text = "Lägg till";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -233,6 +235,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(118, 21);
             this.comboBox2.TabIndex = 18;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // listBeskrivning
             // 
