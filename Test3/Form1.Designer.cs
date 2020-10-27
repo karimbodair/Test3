@@ -1,4 +1,6 @@
-﻿namespace Test3
+﻿using System;
+
+namespace Test3
 {
     partial class Form1
     {
@@ -87,6 +89,7 @@
             this.avsnittList.Size = new System.Drawing.Size(332, 153);
             this.avsnittList.TabIndex = 1;
             this.avsnittList.UseCompatibleStateImageBehavior = false;
+            this.avsnittList.SelectedIndexChanged += new System.EventHandler(this.avsnittList_SelectedIndexChanged);
             // 
             // kategoriList
             // 
@@ -97,6 +100,7 @@
             this.kategoriList.TabIndex = 2;
             this.kategoriList.UseCompatibleStateImageBehavior = false;
             this.kategoriList.View = System.Windows.Forms.View.List;
+            this.kategoriList.SelectedIndexChanged += new System.EventHandler(this.kategoriList_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -274,6 +278,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void kategoriList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
