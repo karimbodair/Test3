@@ -18,7 +18,7 @@ namespace BL
 
         }
 
-        public Podcast GetPodcast(string url)
+        public Podcast GetPodcast(string url) 
         {
             XmlReader FD_readxml = XmlReader.Create(url);
             SyndicationFeed stream = SyndicationFeed.Load(FD_readxml);
