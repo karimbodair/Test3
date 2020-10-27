@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.podcastList = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.avsnittList = new System.Windows.Forms.ListView();
+            this.kategoriList = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -48,22 +48,22 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.listBeskrivning = new System.Windows.Forms.ListBox();
+            this.beskrivningList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // listView1
+            // podcastList
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.podcastList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(28, 21);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(332, 132);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.podcastList.HideSelection = false;
+            this.podcastList.Location = new System.Drawing.Point(28, 21);
+            this.podcastList.Name = "podcastList";
+            this.podcastList.Size = new System.Drawing.Size(332, 132);
+            this.podcastList.TabIndex = 0;
+            this.podcastList.UseCompatibleStateImageBehavior = false;
+            this.podcastList.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -79,24 +79,24 @@
             this.columnHeader3.Text = "Kategori";
             this.columnHeader3.Width = 190;
             // 
-            // listView2
+            // avsnittList
             // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(29, 258);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(332, 153);
-            this.listView2.TabIndex = 1;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.avsnittList.HideSelection = false;
+            this.avsnittList.Location = new System.Drawing.Point(29, 258);
+            this.avsnittList.Name = "avsnittList";
+            this.avsnittList.Size = new System.Drawing.Size(332, 153);
+            this.avsnittList.TabIndex = 1;
+            this.avsnittList.UseCompatibleStateImageBehavior = false;
             // 
-            // listView3
+            // kategoriList
             // 
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(462, 21);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(287, 132);
-            this.listView3.TabIndex = 2;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.List;
+            this.kategoriList.HideSelection = false;
+            this.kategoriList.Location = new System.Drawing.Point(453, 21);
+            this.kategoriList.Name = "kategoriList";
+            this.kategoriList.Size = new System.Drawing.Size(306, 132);
+            this.kategoriList.TabIndex = 2;
+            this.kategoriList.UseCompatibleStateImageBehavior = false;
+            this.kategoriList.View = System.Windows.Forms.View.List;
             // 
             // button1
             // 
@@ -131,7 +131,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(561, 193);
+            this.button4.Location = new System.Drawing.Point(582, 166);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(56, 23);
@@ -142,17 +142,18 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(621, 193);
+            this.button5.Location = new System.Drawing.Point(642, 166);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(56, 23);
             this.button5.TabIndex = 7;
             this.button5.Text = "Ändra";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(682, 193);
+            this.button6.Location = new System.Drawing.Point(703, 166);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(56, 23);
@@ -203,10 +204,10 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(462, 169);
+            this.textBox2.Location = new System.Drawing.Point(453, 168);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(113, 20);
+            this.textBox2.Size = new System.Drawing.Size(125, 20);
             this.textBox2.TabIndex = 14;
             // 
             // comboBox1
@@ -237,20 +238,20 @@
             this.comboBox2.TabIndex = 18;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // listBeskrivning
+            // beskrivningList
             // 
-            this.listBeskrivning.FormattingEnabled = true;
-            this.listBeskrivning.Location = new System.Drawing.Point(453, 264);
-            this.listBeskrivning.Name = "listBeskrivning";
-            this.listBeskrivning.Size = new System.Drawing.Size(306, 147);
-            this.listBeskrivning.TabIndex = 19;
+            this.beskrivningList.FormattingEnabled = true;
+            this.beskrivningList.Location = new System.Drawing.Point(453, 212);
+            this.beskrivningList.Name = "beskrivningList";
+            this.beskrivningList.Size = new System.Drawing.Size(306, 199);
+            this.beskrivningList.TabIndex = 19;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBeskrivning);
+            this.Controls.Add(this.beskrivningList);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.comboBox1);
@@ -265,9 +266,9 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.listView3);
-            this.Controls.Add(this.listView2);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.kategoriList);
+            this.Controls.Add(this.avsnittList);
+            this.Controls.Add(this.podcastList);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -277,12 +278,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView podcastList;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView avsnittList;
+        private System.Windows.Forms.ListView kategoriList;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -297,7 +298,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ListBox listBeskrivning;
+        private System.Windows.Forms.ListBox beskrivningList;
     }
 }
 

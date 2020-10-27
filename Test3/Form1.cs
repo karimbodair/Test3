@@ -25,7 +25,7 @@ namespace Test3
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            kategoriList.SelectedItems[0].Remove();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace Test3
 
             string[] listPodcast = { podcast.namn, podcast.antalAvsnitt.ToString(), "", "" };
             ListViewItem lista = new ListViewItem(listPodcast);
-            listView1.Items.Add(lista);
+            podcastList.Items.Add(lista);
 
             
         }
@@ -51,7 +51,7 @@ namespace Test3
             if (nyKategori.Length != 0)
             {
                 comboBox2.Items.Add(nyKategori);
-                listView3.Items.Add(nyKategori);
+                kategoriList.Items.Add(nyKategori);
             }
             textBox2.Clear();
         }
@@ -60,5 +60,10 @@ namespace Test3
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            kategoriList.SelectedItems[0]
+            }
+        }
     }
-}
