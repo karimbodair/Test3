@@ -10,10 +10,10 @@ using System.Linq;
 #pragma warning restore CS0246 // The type or namespace name 'Test3' could not be found (are you missing a using directive or an assembly reference?)
 namespace BL
 {
-    public class Url_reader
+    public class PodcastController
     {
 
-        public Url_reader()
+        public PodcastController()
         {
 
         }

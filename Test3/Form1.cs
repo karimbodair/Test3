@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BL;
-using DAL;
 using System.ServiceModel.Syndication;
 using System.ServiceModel;
 
@@ -21,7 +20,7 @@ namespace Test3
         private string podname;
 
 
-        Url_reader urlReader = new Url_reader();
+        PodcastController urlReader = new PodcastController();
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +33,7 @@ namespace Test3
 
         private void button_Click_Add(object sender, EventArgs e)
         {
-            var podcast = urlReader.GetPodcast(textBox3.Text);
+            var podcast = PodcastController.GetPodcast(textBox3.Text);
             string[] listPodcast = { podcast.namn, podcast.antalAvsnitt.ToString(), "", "" };
             ListViewItem list = new ListViewItem(listPodcast);
             podcastList.Items.Add(list);

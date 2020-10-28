@@ -74,7 +74,7 @@ namespace Test3
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Uppdateringsfrekvens";
+            this.columnHeader2.Text = "Antal avsnitt";
             this.columnHeader2.Width = 131;
             // 
             // columnHeader3
