@@ -53,5 +53,28 @@ namespace DAL
             }
             return categoryObjToBeReturned;
         }
+
+        public void Serialize(Episodes episodeObjekt)
+        {
+            XmlSerializer xmlSeralizer = new XmlSerializer(episodeObjekt.GetType());
+            using (FileStream outFile = new FileStream("CategoryData.xml", FileMode.Create,
+                FileAccess.Write))
+            {
+                xmlSeralizer.Serialize(outFile, episodeObjekt);
+            }
+
+        }
+
+        public Episodes EpisodesDeserializer()
+        {
+            Episodes episodeObjToBeReturned;
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Episodes));
+            using (FileStream inFile = new FileStream("EpisodesData.xml", FileMode.Open,
+                FileAccess.Read))
+            {
+                episodeObjToBeReturned = (Episodes)xmlSerializer.Deserialize(inFile);
+            }
+            return episodeObjToBeReturned;
+        }
     }
 }

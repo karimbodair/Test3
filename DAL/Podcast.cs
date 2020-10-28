@@ -14,7 +14,7 @@ namespace DAL
 
         public int frekvens { get; set; }
 
-        public List<Episode> listOfEpisodes { get; set; }
+        public List<Episodes> listOfEpisodes { get; set; }
         //lista episode (title, desc)
     }
 }

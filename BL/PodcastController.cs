@@ -29,16 +29,15 @@ namespace BL
             return podcast;
         }
 
-        private List<Episode> GetEpisodes(SyndicationFeed stream)
+        private List<Episodes> GetEpisodes(SyndicationFeed stream)
         {
-            var EpisodeList = new List<Episode>();
+            var EpisodeList = new List<Episodes>();
 
             foreach (SyndicationItem item in stream.Items)
             {
-                var episode = new Episode();
+                var episode = new Episodes();
                 episode.Title = item.Title.Text;
                 episode.Description = item.Summary.Text;
-                //episode.Url = url;
                 EpisodeList.Add(episode);
             }
             return EpisodeList;

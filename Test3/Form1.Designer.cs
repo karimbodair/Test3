@@ -51,6 +51,8 @@ namespace Test3
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.kategoriBox = new System.Windows.Forms.ComboBox();
             this.beskrivningList = new System.Windows.Forms.ListView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.namnRuta = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // podcastList
@@ -85,9 +87,9 @@ namespace Test3
             // avsnittList
             // 
             this.avsnittList.HideSelection = false;
-            this.avsnittList.Location = new System.Drawing.Point(29, 258);
+            this.avsnittList.Location = new System.Drawing.Point(28, 298);
             this.avsnittList.Name = "avsnittList";
-            this.avsnittList.Size = new System.Drawing.Size(332, 153);
+            this.avsnittList.Size = new System.Drawing.Size(332, 127);
             this.avsnittList.TabIndex = 1;
             this.avsnittList.UseCompatibleStateImageBehavior = false;
             this.avsnittList.SelectedIndexChanged += new System.EventHandler(this.avsnittList_SelectedIndexChanged);
@@ -105,7 +107,7 @@ namespace Test3
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(244, 172);
+            this.button1.Location = new System.Drawing.Point(304, 220);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 20);
@@ -136,7 +138,7 @@ namespace Test3
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(582, 166);
+            this.button4.Location = new System.Drawing.Point(582, 175);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(56, 23);
@@ -147,7 +149,7 @@ namespace Test3
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(642, 166);
+            this.button5.Location = new System.Drawing.Point(642, 175);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(56, 23);
@@ -158,7 +160,7 @@ namespace Test3
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(703, 166);
+            this.button6.Location = new System.Drawing.Point(703, 175);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(56, 23);
@@ -200,7 +202,7 @@ namespace Test3
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 245);
+            this.label4.Location = new System.Drawing.Point(25, 282);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
@@ -209,7 +211,7 @@ namespace Test3
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(453, 168);
+            this.textBox2.Location = new System.Drawing.Point(453, 178);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(125, 20);
@@ -229,7 +231,7 @@ namespace Test3
             this.textBox3.Location = new System.Drawing.Point(28, 172);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
+            this.textBox3.Size = new System.Drawing.Size(240, 20);
             this.textBox3.TabIndex = 17;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -246,17 +248,36 @@ namespace Test3
             // beskrivningList
             // 
             this.beskrivningList.HideSelection = false;
-            this.beskrivningList.Location = new System.Drawing.Point(453, 212);
+            this.beskrivningList.Location = new System.Drawing.Point(453, 226);
             this.beskrivningList.Name = "beskrivningList";
             this.beskrivningList.Size = new System.Drawing.Size(306, 199);
             this.beskrivningList.TabIndex = 19;
             this.beskrivningList.UseCompatibleStateImageBehavior = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(28, 251);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(239, 20);
+            this.textBox1.TabIndex = 20;
+            // 
+            // namnRuta
+            // 
+            this.namnRuta.AutoSize = true;
+            this.namnRuta.Location = new System.Drawing.Point(26, 235);
+            this.namnRuta.Name = "namnRuta";
+            this.namnRuta.Size = new System.Drawing.Size(35, 13);
+            this.namnRuta.TabIndex = 21;
+            this.namnRuta.Text = "Namn";
+            this.namnRuta.Click += new System.EventHandler(this.label5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.namnRuta);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.beskrivningList);
             this.Controls.Add(this.kategoriBox);
             this.Controls.Add(this.textBox3);
@@ -310,6 +331,8 @@ namespace Test3
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ComboBox kategoriBox;
         private System.Windows.Forms.ListView beskrivningList;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label namnRuta;
     }
 }
 

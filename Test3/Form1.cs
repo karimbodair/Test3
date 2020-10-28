@@ -100,6 +100,11 @@ namespace Test3
                 }
             }
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
         //private void beskrivningList_SelectedIndexChanged(object sender, EventArgs e)
         //{
 
