@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 namespace DAL
 {
-    class XmlController
+    public class XmlController
     {
         public void Serialize(Podcast podObj)
         {

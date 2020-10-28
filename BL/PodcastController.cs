@@ -12,21 +12,27 @@ namespace BL
 {
     public class PodcastController
     {
-
+        public XmlController xmlController;
+        public Podcast podcast;
         public PodcastController()
         {
-
+            podcast = new Podcast();
+            xmlController = new XmlController();
         }
 
-        public Podcast GetPodcast(string url) 
+
+
+        public void GetPodcast(string url) 
         {
+            
             XmlReader FD_readxml = XmlReader.Create(url);
             SyndicationFeed stream = SyndicationFeed.Load(FD_readxml);
-            var podcast = new Podcast();
+            
             podcast.listOfEpisodes = GetEpisodes(stream);
             podcast.namn = stream.Title.Text;
             podcast.antalAvsnitt = stream.Items.Count();
-            return podcast;
+
+            xmlController.Serialize(podcast);
         }
 
         private List<Episodes> GetEpisodes(SyndicationFeed stream)
