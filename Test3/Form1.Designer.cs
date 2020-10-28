@@ -50,9 +50,9 @@ namespace Test3
             this.frekvensBox = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.kategoriBox = new System.Windows.Forms.ComboBox();
-            this.beskrivningList = new System.Windows.Forms.ListView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.namnRuta = new System.Windows.Forms.Label();
+            this.txtBeskrivning = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // podcastList
@@ -245,15 +245,6 @@ namespace Test3
             this.kategoriBox.TabIndex = 18;
             this.kategoriBox.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // beskrivningList
-            // 
-            this.beskrivningList.HideSelection = false;
-            this.beskrivningList.Location = new System.Drawing.Point(453, 226);
-            this.beskrivningList.Name = "beskrivningList";
-            this.beskrivningList.Size = new System.Drawing.Size(306, 199);
-            this.beskrivningList.TabIndex = 19;
-            this.beskrivningList.UseCompatibleStateImageBehavior = false;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(28, 251);
@@ -271,14 +262,22 @@ namespace Test3
             this.namnRuta.Text = "Namn";
             this.namnRuta.Click += new System.EventHandler(this.label5_Click);
             // 
+            // txtBeskrivning
+            // 
+            this.txtBeskrivning.Location = new System.Drawing.Point(453, 220);
+            this.txtBeskrivning.Multiline = true;
+            this.txtBeskrivning.Name = "txtBeskrivning";
+            this.txtBeskrivning.Size = new System.Drawing.Size(306, 205);
+            this.txtBeskrivning.TabIndex = 22;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtBeskrivning);
             this.Controls.Add(this.namnRuta);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.beskrivningList);
             this.Controls.Add(this.kategoriBox);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.frekvensBox);
@@ -330,9 +329,9 @@ namespace Test3
         private System.Windows.Forms.ComboBox frekvensBox;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ComboBox kategoriBox;
-        private System.Windows.Forms.ListView beskrivningList;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label namnRuta;
+        private System.Windows.Forms.TextBox txtBeskrivning;
     }
 }
 

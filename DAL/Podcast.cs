@@ -4,6 +4,7 @@ using System.Text;
 
 namespace DAL
 {
+    [Serializable]
     public class Podcast
     {
         public string namn { get; set; }
