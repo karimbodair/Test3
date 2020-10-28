@@ -11,4 +11,7 @@ namespace DAL
         void Update(string index, string entity);
         List<T> GetAll();
     }
+
+    // Ska vara virtual i den här klassen
+
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DAL
 {
-
+    [Serializable]
     public class Episodes
     {
         //Ordningen på noden bestämmer hur den kommer visas i XML-filen.

@@ -105,9 +105,11 @@ namespace Test3
         {
 
         }
-        //private void beskrivningList_SelectedIndexChanged(object sender, EventArgs e)
-        //{
 
-        //}
+        private void beskrivningList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtBeskrivning.Text = "";
+            txtBeskrivning.Text = PodcastController.GETPERSONDETAILSBYNAME(avsnittList.SelectedItem.ToString());
+        }
     }
 }

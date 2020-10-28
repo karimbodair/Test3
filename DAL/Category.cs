@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-
+    [Serializable]
     public class Category
     {
         //Ordningen på noden bestämmer hur den kommer visas i XML-filen.
